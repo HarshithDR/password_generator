@@ -5,6 +5,7 @@ import customtkinter as ctk
 window = ctk.CTk()
 window.title('password manager')
 window.geometry('600x400')
+print(213421)
 
 
 #run
