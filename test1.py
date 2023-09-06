@@ -10,5 +10,6 @@ window.geometry('600x400')
 label = ctk.CTkLabel(window, text = 'label')
 label.pack()
 
+
 #run
 window.mainloop()
