@@ -9,5 +9,3 @@ window.geometry('600x400')
 
 #run
 window.mainloop()
-
-
