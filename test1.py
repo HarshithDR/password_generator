@@ -5,8 +5,10 @@ import customtkinter as ctk
 window = ctk.CTk()
 window.title('password manager')
 window.geometry('600x400')
-print(213421)
 
+#widgets
+label = ctk.CTkLabel(window, text = 'label')
+label.pack()
 
 #run
 window.mainloop()
