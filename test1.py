@@ -41,7 +41,6 @@ button.pack()
 # slider = ctk.CTkSlider(frame)
 # slider.pack(padx = 20, pady = 20)
 
-
 switch_var = ctk.StringVar(value="on")
 switch = ctk.CTkSwitch(window, text="Excercise Switch", command=switch_event, corner_radius= 34, switch_height= 23,
                                  variable=switch_var, onvalue="on", offvalue="off")
