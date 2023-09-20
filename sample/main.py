@@ -1,26 +1,31 @@
-import tkinter as tk
-from page1 import Page1
-from page2 import Page2
+import customtkinter as ctk
+from home_page import Home_test
+from gp_page import Gp_test
 
-class MultiPageApp:
-    def __init__(self, root):
-        self.root = root
-        self.root.geometry('400x300')
+class App:
+    def __init__(self, window):
+        self.window = window
+        self.window.title('Password generator')
+        self.window.geometry('600x400')
 
-        self.page1 = Page1(self.root, self.show_page2)
-        self.page2 = Page2(self.root, self.show_page1)
+        self.home_test_obj = Home_test(self.window, self.show_gp_test_fun())
+        self.gp_test_obj = Gp_test(self.window, self.show_home_test_fun())
 
-        self.show_page1()
 
-    def show_page1(self):
-        self.page2.page2.pack_forget()
-        self.page1.page1.pack()
+        #running home page
+        self.show_home_test_fun()
 
-    def show_page2(self):
-        self.page1.page1.pack_forget()
-        self.page2.page2.pack()
+    def show_home_test_fun(self):
+        self.gp_test_obj.gp_test_frame.pack_forget()
+        self.home_test_obj.home_test_frame.pack()
+
+    def show_gp_test_fun(self, password):
+        self.home_test_obj.home_test_frame.pack_forget()
+        self.gp_test_obj.gp_password = password
+        self.gp_test_obj.gp_test_frame.pack()
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = MultiPageApp(root)
-    root.mainloop()
+    ctk.set_appearance_mode('dark')
+    window = ctk.CTk()
+    app = App(window)
+    window.mainloop()
