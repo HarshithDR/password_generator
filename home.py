@@ -1,13 +1,15 @@
 import customtkinter as ctk
 import tkinter as tk
+import encryptor
 
 #creating submit function
 def onSubmit():
     text1 = entry_1.get()
     text2 = entry_2.get()
     text3 = entry_3.get()
-    print(text1,text2,text3)
-
+    # print(text1,text2,text3)
+    password = encryptor.encrypt_string(text1 + text2 + text3)
+    print(password)
 
 # creating howe window
 home_Window = ctk.CTk()

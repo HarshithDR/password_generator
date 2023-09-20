@@ -68,3 +68,4 @@ window.mainloop()
 
 # https://www.youtube.com/watch?v=vVRrOi5LGSo
 # menu bar animation
+#https://github.com/clear-code-projects/tkinter-complete/blob/main/3%20style/3_8_animated_widgets.py
