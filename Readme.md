@@ -12,10 +12,16 @@ Securely generate and copy strong, encrypted passwords with this advanced passwo
 ## Table of Contents
 
 - [Installation](#installation)
+- [Usage](#Usage)
+
+## Usage
+
+Run the main file in the working code
 
 ## Installation
 
-1. Clone the repository to your local machine:
+Clone the repository to your local machine:
 
    ```bash
    git clone https://github.com/HarshithDR/password_generator
+
