@@ -35,11 +35,11 @@ button = ctk.CTkButton(window,
 button.pack()
 
 # #frame
-# frame = ctk.CTkFrame(window, fg_color= 'transparent')
-# frame.pack()
-#
-# slider = ctk.CTkSlider(frame)
-# slider.pack(padx = 20, pady = 20)
+frame = ctk.CTkFrame(window, fg_color= 'transparent')
+frame.pack()
+
+slider = ctk.CTkSlider(frame)
+slider.pack(padx = 20, pady = 20)
 
 switch_var = ctk.StringVar(value="on")
 switch = ctk.CTkSwitch(window, text="Excercise Switch", command=switch_event, corner_radius= 34, switch_height= 23,
@@ -63,3 +63,8 @@ radiobutton_2.pack()
 
 #run
 window.mainloop()
+
+
+
+# https://www.youtube.com/watch?v=vVRrOi5LGSo
+# menu bar animation
