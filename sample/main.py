@@ -36,7 +36,6 @@ class App:
                                             fill="both",
                                             expand=True)
 
-
 if __name__ == "__main__":
     ctk.set_appearance_mode('dark')
     window = ctk.CTk()

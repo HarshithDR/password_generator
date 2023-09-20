@@ -13,7 +13,7 @@ class Gp_test:
                                           corner_radius=20)
 
         #creating label
-        self.label = ctk.CTkLabel(master=self.gp_test_frame,
+        self.gp_page_label = ctk.CTkLabel(master=self.gp_test_frame,
                                   text="Generated Password",
                                   font=('TkHeadingFont', 15, "bold"),
                                   pady=10,
@@ -38,7 +38,7 @@ class Gp_test:
 
 
         #packing objects
-        self.label.pack(pady = 10, anchor = 'center')
+        self.gp_page_label.pack(pady = 10, anchor = 'center')
         self.gp_label.pack(pady = 10, anchor = 'center')
         self.copy_label.pack(pady = 10, anchor = 'center')
         self.cpButton.pack(pady = 10, anchor = 'center')

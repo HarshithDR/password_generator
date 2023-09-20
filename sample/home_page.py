@@ -12,7 +12,7 @@ class Home_test:
 
 
         # creating input area
-        self.label = ctk.CTkLabel(master=self.home_test_frame,
+        self.home_label = ctk.CTkLabel(master=self.home_test_frame,
                              text="Enter the keys to generate password",
                              font=('TkHeadingFont', 15, "bold"),
                              pady=10,
@@ -45,7 +45,7 @@ class Home_test:
     
 
         #packing everything
-        self.label.pack()
+        self.home_label.pack()
         self.entry_1.pack(padx=30, pady=10)
         self.entry_2.pack(padx=10, pady=10)
         self.entry_3.pack(padx=20, pady=10)
@@ -57,8 +57,16 @@ class Home_test:
         self.key1 = self.entry_1.get()
         self.key2 = self.entry_2.get()
         self.key3 = self.entry_3.get()
-        self.password = encryptor.encrypt_string(self.key1 + self.key2 + self.key3)
+
+        self.password = encryptor.encrypt_string(self.key1 + self.key2 + self.key3)[7:23]
         # print(self.password)
+
+        if self.checkbox_upper.get() == 'on':
+            self.password = self.password + 'A'
+
+        if self.checkbox_special.get() == 'on':
+            self.password = self.password + '@'
+
         return self.password
         
     def onSubmit(self):
