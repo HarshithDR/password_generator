@@ -1,5 +1,4 @@
 import customtkinter as ctk
-import tkinter as tk
 import encryptor
 
 #creating submit function
