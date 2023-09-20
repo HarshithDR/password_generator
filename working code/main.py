@@ -13,7 +13,6 @@ class App:
 
         self.gp_test_obj = Gp_test(self.window, self.show_home_test_fun)
 
-
         #running home page
         self.show_home_test_fun()
 
@@ -36,7 +35,6 @@ class App:
                                             padx=20,
                                             fill="both",
                                             expand=True)
-
 
 if __name__ == "__main__":
     ctk.set_appearance_mode('dark')
