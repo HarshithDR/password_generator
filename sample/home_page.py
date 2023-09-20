@@ -23,6 +23,21 @@ class Home_test:
         self.entry_2 = ctk.CTkEntry(self.home_test_frame, placeholder_text="key 2")
         self.entry_3 = ctk.CTkEntry(self.home_test_frame, placeholder_text="key 3")
 
+        #checkbox
+        self.check_Uppercase = ctk.StringVar(value="on")
+        self.checkbox_upper = ctk.CTkCheckBox(self.home_test_frame,
+                                        text="Include Uppercase",
+                                        variable=self.check_Uppercase,
+                                        onvalue="on",
+                                        offvalue="off")
+
+        self.check_special_characters = ctk.StringVar(value="on")
+        self.checkbox_special = ctk.CTkCheckBox(self.home_test_frame,
+                                        text="Include Uppercase",
+                                        variable=self.check_special_characters,
+                                        onvalue="on",
+                                        offvalue="off")
+
         # Create a Submit button
         self.submit_button = ctk.CTkButton(self.home_test_frame,
                                            text="Submit",
@@ -34,6 +49,8 @@ class Home_test:
         self.entry_1.pack(padx=30, pady=10)
         self.entry_2.pack(padx=10, pady=10)
         self.entry_3.pack(padx=20, pady=10)
+        self.checkbox_upper.pack(padx=10, pady=10)
+        self.checkbox_special.pack(padx=10, pady=10)
         self.submit_button.pack(pady=10)
         
     def generatePassword(self):

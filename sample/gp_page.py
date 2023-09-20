@@ -14,7 +14,6 @@ class Gp_test:
 
         #creating label
         self.label = ctk.CTkLabel(master=self.gp_test_frame,
-                                  corner_radius=12,
                                   text="Generated Password",
                                   font=('TkHeadingFont', 15, "bold"),
                                   pady=10,
@@ -23,8 +22,8 @@ class Gp_test:
         #creating label for showing password
         self.gp_label = ctk.CTkLabel(self.gp_test_frame,
                                  text=self.gp_password,
-                                 bg_color = '#FF7900',
-                                 corner_radius = 10,
+                                 bg_color = '#003049',
+                                 corner_radius = 20,
                                  text_color = '#FFFFFF')
 
         self.cpButton = ctk.CTkButton(self.gp_test_frame,
@@ -39,11 +38,11 @@ class Gp_test:
 
 
         #packing objects
-        self.label.pack()
-        self.gp_label.pack()
-        self.copy_label.pack()
-        self.cpButton.pack()
-        self.backButton.pack()
+        self.label.pack(pady = 10, anchor = 'center')
+        self.gp_label.pack(pady = 10, anchor = 'center')
+        self.copy_label.pack(pady = 10, anchor = 'center')
+        self.cpButton.pack(pady = 10, anchor = 'center')
+        self.backButton.pack(pady = 10, anchor = 'center')
 
     def copyClipboard(self):
         pc.copy(self.gp_password)

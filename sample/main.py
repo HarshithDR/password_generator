@@ -13,7 +13,6 @@ class App:
 
         self.gp_test_obj = Gp_test(self.window, self.show_home_test_fun)
 
-
         #running home page
         self.show_home_test_fun()
 
