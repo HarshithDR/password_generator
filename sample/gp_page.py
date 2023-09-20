@@ -47,9 +47,12 @@ class Gp_test:
 
     def copyClipboard(self):
         pc.copy(self.gp_password)
+        # print(self.gp_password)
         self.copy_label.configure(text = 'copied')
 
 
     def onBack(self):
         self.gp_test_frame.pack_forget()
+        self.copy_label.configure(text = '')
         self.show_home_test_callback_fun()
+

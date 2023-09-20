@@ -41,7 +41,7 @@ class Home_test:
         self.key2 = self.entry_2.get()
         self.key3 = self.entry_3.get()
         self.password = encryptor.encrypt_string(self.key1 + self.key2 + self.key3)
-        print(self.password)
+        # print(self.password)
         return self.password
         
     def onSubmit(self):
