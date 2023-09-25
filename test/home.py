@@ -44,5 +44,3 @@ submit_button.pack()
 
 
 home_Window.mainloop()
-
-
