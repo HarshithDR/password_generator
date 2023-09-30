@@ -23,7 +23,13 @@ class Home_test:
         self.entry_2 = ctk.CTkEntry(self.home_test_frame, placeholder_text="Number", show = '*')
         self.entry_3 = ctk.CTkEntry(self.home_test_frame, placeholder_text="Application", show = '*')
 
-        # checkboxs
+        # Show/Hide password button
+        self.password_visible = False
+        self.toggle_password_button = ctk.CTkButton(self.home_test_frame,
+                                                    text = "Show Password",
+                                                    command= self.toggle_password_visibility)
+
+        # checkboxes to include uppercase and special characters
         self.check_Uppercase = ctk.StringVar(value="on")
         self.checkbox_upper = ctk.CTkCheckBox(self.home_test_frame,
                                               text="Include Uppercase",
@@ -48,9 +54,18 @@ class Home_test:
         self.entry_1.pack(padx=30, pady=10)
         self.entry_2.pack(padx=10, pady=10)
         self.entry_3.pack(padx=20, pady=10)
-        self.checkbox_upper.pack(padx=10, pady=10)
-        self.checkbox_special.pack(padx=10, pady=10)
+        self.toggle_password_button.pack(pady=10)
+        self.checkbox_upper.pack(pady=10)
+        self.checkbox_special.pack(pady=10)
         self.submit_button.pack(pady=10)
+
+    def toggle_password_visibility(self):
+        self.password_visible = not self.password_visible
+        show_char = '' if self.password_visible else '•'
+        self.entry_1.configure(show = show_char)
+        self.entry_2.configure(show = show_char)
+        self.entry_3.configure(show = show_char)
+        self.toggle_password_button.configure(text = "Hide Password" if self.password_visible else "Show Password")
 
     def generatePassword(self):
         self.key1 = self.entry_1.get()
