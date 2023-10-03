@@ -44,6 +44,8 @@ class Gp_test:
         self.cpButton.pack(pady = 10, anchor = 'center')
         self.backButton.pack(pady = 10, anchor = 'center')
 
+
+
     def copyClipboard(self):
         pc.copy(self.gp_password)
         # print(self.gp_password)

@@ -1,6 +1,46 @@
 import customtkinter as ctk
 import encryptor
 
+class MenuPanel(ctk.CTkFrame):
+    def __init__(self,parent,start_pos,end_pos):
+        super().__init__(master=parent)
+        # general attributes
+        self.start_pos = start_pos
+        self.end_pos = end_pos
+        self.height = abs(start_pos - end_pos)
+
+        # animation logic
+        self.pos = self.start_pos
+        self.in_start_pos = True
+
+
+        # layout
+        self.place(relx=0.05, rely=self.start_pos,relwidth = 0.2,relheight = self.height)
+
+    def animate(self):
+        print(self.in_start_pos)
+        if self.in_start_pos:
+            self.animate_forward()
+        else:
+            self.animate_backwards()
+
+    def animate_forward(self):
+        if self.pos > self.end_pos:
+            self.pos += 0.008
+            self.place(relx=0.05, rely=self.pos,relwidth = 0.2,relheight = self.height)
+            self.after(10, self.animate_forward)
+        else:
+            self.in_start_pos = False
+
+    def animate_backwards(self):
+        if self.pos < self.start_pos:
+            self.pos -= 0.008
+            self.place(relx=0.05, rely=self.pos, relwidth=0.2,relheight = self.height)
+            self.after(10, self.animate_backwards)
+        else:
+            self.in_start_pos = True
+
+
 
 class Home_test:
     def __init__(self, window, show_gp_test_callback_fun):
@@ -10,6 +50,21 @@ class Home_test:
         # creating home screen frame
         self.home_test_frame = ctk.CTkFrame(master=window,
                                             corner_radius=20)
+
+
+
+
+        #97888888888888888888888888888888
+        self.animateMenu = MenuPanel(self.home_test_frame,1.0, 0.7)
+        self.menu = ctk.CTkButton(self.home_test_frame,text = 'menu', command= self.animateMenu.animate).pack()
+
+        #34-098562=====-0
+
+
+
+
+
+
 
         # creating label
         self.home_label = ctk.CTkLabel(master=self.home_test_frame,

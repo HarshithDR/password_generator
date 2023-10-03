@@ -7,7 +7,7 @@ class App:
 
         self.window = window
         self.window.title('Password generator')
-        self.window.geometry('600x400')
+        self.window.geometry('700x500')
 
         self.home_test_obj = Home_test(self.window, self.show_gp_test_fun)
 
